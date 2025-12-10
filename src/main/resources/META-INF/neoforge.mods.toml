@@ -3,24 +3,24 @@ loaderVersion = "[2,)"
 license = "MIT"
 
 [[mods]]
-modId = "modtemplate"
-displayName = "Mod Template"
+modId = "ganymede"
+displayName = "Ganymede"
 version = "${version}"
 displayURL = ""
 logoFile = "assets/icon.png"
-authors = "A Mod Author"
-description = '''A Mod Description'''
+authors = "IAFEnvoy"
+description = '''Load cloth configs into Jupiter'''
 
 [[mixins]]
-config = "modtemplate.mixins.json"
+config = "ganymede.mixins.json"
 
-[[dependencies.modtemplate]]
+[[dependencies.ganymede]]
 modId = "neoforge"
 type = "required"
 versionRange = "[1,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.modtemplate]]
+[[dependencies.ganymede]]
 modId = "minecraft"
 type = "required"

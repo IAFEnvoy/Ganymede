@@ -22,10 +22,6 @@ tasks.named<ProcessResources>("processResources") {
 version = "${property("mod.version")}+${property("deps.minecraft")}-fabric"
 base.archivesName = property("mod.id") as String
 
-loom {
-    accessWidenerPath = rootProject.file("src/main/resources/${property("mod.id")}.accesswidener")
-}
-
 jsonlang {
     languageDirectories = listOf("assets/${property("mod.id")}/lang")
     prettyPrint = true
@@ -34,6 +30,8 @@ jsonlang {
 repositories {
     mavenLocal()
     maven("https://maven.parchmentmc.org") { name = "ParchmentMC" }
+    maven("https://maven.architectury.dev/") { name = "Math" }
+    maven("https://api.modrinth.com/maven") { name = "Jupiter" }
 }
 
 dependencies {
@@ -48,6 +46,12 @@ dependencies {
 
     val modules = listOf("transitive-access-wideners-v1", "registry-sync-v0", "resource-loader-v0")
     for (it in modules) modImplementation(fabricApi.module("fabric-$it", property("deps.fabric-api") as String))
+
+    implementation("maven.modrinth:jupiter:b1MWfU6yz")
+    implementation("me.shedaniel.cloth:basic-math:0.6.1")?.let { include(it) }
+    implementation("blue.endless:jankson:${property("deps.jankson")}")?.let { include(it) }
+    implementation("com.moandjiezana.toml:toml4j:${property("deps.toml4j")}")?.let { include(it) }
+    implementation("org.yaml:snakeyaml:${property("deps.snakeyaml")}")?.let { include(it) }
 }
 
 fabricApi {

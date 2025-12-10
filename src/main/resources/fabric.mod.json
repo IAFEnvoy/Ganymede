@@ -1,31 +1,30 @@
 {
   "schemaVersion": 1,
-  "id": "modtemplate",
-  "name": "Mod Template",
+  "id": "ganymede",
+  "name": "Ganymede",
   "version": "${version}",
-  "authors": ["A Mod Author"],
+  "authors": ["IAFEnvoy"],
   "contact": {
     "sources": "",
     "issues": ""
   },
-  "description": "A Mod Description",
+  "description": "Load cloth configs into Jupiter",
   "icon": "assets/icon.png",
   "license": "MIT",
   "environment": "*",
-  "accessWidener": "modtemplate.accesswidener",
   "entrypoints": {
     "main": [
-      "dev.spagurder.modtemplate.fabric.FabricEntrypoint"
+      "com.iafenvoy.ganymede.fabric.FabricEntrypoint"
     ],
     "client": [
-      "dev.spagurder.modtemplate.fabric.FabricClientEntrypoint"
+      "com.iafenvoy.ganymede.fabric.FabricClientEntrypoint"
     ],
     "fabric-datagen": [
-      "dev.spagurder.modtemplate.fabric.datagen.FabricDataGeneratorEntrypoint"
+      "com.iafenvoy.ganymede.fabric.datagen.FabricDataGeneratorEntrypoint"
     ]
   },
   "mixins": [
-    "modtemplate.mixins.json"
+    "ganymede.mixins.json"
   ],
   "depends": {
     "fabric-api": "*"

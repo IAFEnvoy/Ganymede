@@ -1,10 +1,10 @@
-package dev.spagurder.modtemplate;
+package com.iafenvoy.ganymede;
 
 //? fabric {
-import dev.spagurder.modtemplate.fabric.FabricPlatformImpl;
+import com.iafenvoy.ganymede.fabric.FabricPlatformImpl;
 //?}
 //? neoforge {
-/*import dev.spagurder.modtemplate.neoforge.NeoforgePlatformImpl;
+/*import com.iafenvoy.ganymede.neoforge.NeoforgePlatformImpl;
 *///?}
 
 public interface Platform {
